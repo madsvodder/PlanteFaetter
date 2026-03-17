@@ -24,4 +24,9 @@ class Backend {
             return "Error: ${e.message}"
         }
     }
+
+    fun closeClient() {
+        client.close()
+        println("Http Client Closed!")
+    }
 }
