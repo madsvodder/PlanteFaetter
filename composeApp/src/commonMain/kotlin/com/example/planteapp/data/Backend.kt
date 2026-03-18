@@ -1,7 +1,6 @@
-package com.example.planteapp.backend
+package com.example.planteapp.data
 
 import io.ktor.client.HttpClient
-import io.ktor.client.request.get
 import io.ktor.client.request.request
 import io.ktor.client.statement.HttpResponse
 import io.ktor.client.statement.bodyAsText

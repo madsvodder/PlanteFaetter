@@ -33,6 +33,7 @@ kotlin {
     
     sourceSets {
         commonMain.dependencies {
+            implementation("org.jetbrains.androidx.navigation:navigation-compose:2.9.2")
             implementation(libs.ktor.client.core)
             implementation(libs.ktor.client.content.negotiation)
             implementation(libs.ktor.serialization.kotlinx.json)

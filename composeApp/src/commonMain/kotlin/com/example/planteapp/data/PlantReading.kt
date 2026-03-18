@@ -1,4 +1,4 @@
-package com.example.planteapp
+package com.example.planteapp.data
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
@@ -6,8 +6,9 @@ import kotlinx.serialization.Serializable
 @Serializable
 data class PlantReading(
     val id: Int,
-    @SerialName("plantid") val plantId: Int,
-    @SerialName("plantname") val plantName: String,
+    val plantId: Int,
+    val plantName: String,
     val moisture: Int,
+    val temperature: Int,
     val timestamp: String
 )

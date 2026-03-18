@@ -21,7 +21,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.planteapp.PlantReading
+import com.example.planteapp.data.PlantReading
 import com.example.planteapp.enums.PlantStatType
 
 @Composable
@@ -32,10 +32,6 @@ fun PlantInfo(latestReading: PlantReading?) {
         if (latestReading === null) {
             Text("Failed to fetch plant data from API")
         } else {
-            Text(
-                modifier = Modifier.align(Alignment.CenterHorizontally),
-                text = latestReading.plantName ?: ""
-                )
             StatCard(latestReading, PlantStatType.Moisture)
             StatCard(latestReading, PlantStatType.UV)
             StatCard(latestReading, PlantStatType.Temperature)
@@ -84,7 +80,7 @@ fun StatCard(latestReading: PlantReading?, type: PlantStatType) {
                     when (type) {
                         PlantStatType.Moisture -> "${latestReading?.moisture.toString()}%"
                         PlantStatType.UV -> "${latestReading?.moisture.toString()}"
-                        PlantStatType.Temperature -> "${latestReading?.moisture.toString()} ℃"
+                        PlantStatType.Temperature -> "${latestReading?.temperature.toString()} ℃"
                     }
             )
         }
