@@ -11,12 +11,11 @@ class PlantInfoViewModel {
     private var backend = Backend()
     var latestReading by mutableStateOf<PlantReading?>(null)
     var isRefreshing by mutableStateOf(false)
-    var mockMode: Boolean = true
+    var mockMode: Boolean = false
 
     val mockReading = PlantReading(
         id = 0,
         plantId = 0,
-        plantName = "Jefri house plant",
         moisture = 47,
         timestamp = "123",
         temperature = 400,

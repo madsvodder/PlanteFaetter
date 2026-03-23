@@ -69,7 +69,7 @@ fun PlantInfoView(onBack: () -> Unit, viewModel: PlantInfoViewModel = remember {
                     titleContentColor = MaterialTheme.colorScheme.primary,
                 ),
                 title = {
-                    Text(viewModel.latestReading?.plantName ?: "No data")
+                    Text(text = "Jefri house plant")
                 }
             )
         },

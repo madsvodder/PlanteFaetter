@@ -7,8 +7,7 @@ import kotlinx.serialization.Serializable
 data class PlantReading(
     val id: Int,
     val plantId: Int,
-    val plantName: String,
     val moisture: Int,
-    val temperature: Int,
+    val temperature: Int?,
     val timestamp: String
 )

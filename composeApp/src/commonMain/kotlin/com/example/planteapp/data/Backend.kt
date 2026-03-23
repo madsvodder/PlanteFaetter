@@ -7,8 +7,9 @@ import io.ktor.client.statement.bodyAsText
 import io.ktor.http.HttpMethod
 
 
+
 class Backend {
-    val testUrl: String = "http://10.176.210.220:8000/readings/latest"
+    val testUrl: String = "http://10.176.210.220:5000/plantreadings"
 
     // Create a client
     private val client: HttpClient = HttpClient()
@@ -22,10 +23,5 @@ class Backend {
         } catch (e: Exception) {
             return "Error: ${e.message}"
         }
-    }
-
-    fun closeClient() {
-        client.close()
-        println("Http Client Closed!")
     }
 }
